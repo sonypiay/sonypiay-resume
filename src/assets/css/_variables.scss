@@ -1,5 +1,45 @@
+// Font Base
 $font-base: 'Karla', sans-serif;
 $font-base-size: 14px;
 
-$primary-color: '#41B883';
-$secondary-color: '#181818';
+// Base Color
+$primary-color: #1E87F0;
+$secondary-color: #181818;
+
+// Brand Color
+$brand-primary: #3097D1;
+$brand-info: #8eb4cb;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger: #ea515a;
+
+@mixin global-font-props($size, $weight, $style, $stretch, $spacing, $decoration) {
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+  font-stretch: $stretch;
+  letter-spacing: $spacing;
+  text-decoration: $decoration;
+}
+
+@function color-setting($color)
+{
+  @if( lightness($color) > 70 )
+  {
+    @return $primary-color;
+  }
+  @else
+  {
+    @return #ffffff;
+  }
+}
+
+@mixin transition( $property, $delay, $animation )
+{
+  $transition: $property $delay $animation 0s;
+  transition: $transition;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -ms-transition: $transition;
+}

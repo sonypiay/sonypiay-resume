@@ -1,6 +1,106 @@
 html, body {
-  font: {
-    family: $font-base;
-    weight: 400;
+  font: { family: $font-base; }
+  vertical-align: baseline;
+  background: #f9f9f9;
+}
+
+@import 'media';
+
+.content-profile {
+  margin-top: 3rem;
+  .profile-name {
+    @include global-font-props( 40px, 700, normal, normal, -1px, none );
+    color: $primary-color;
+  }
+  .profile-profession {
+    @include global-font-props( 22px, 700, normal, normal, -1px, none );
+    color: $primary-color;
+    margin-top: -5px;
+  }
+  img.ava {
+    border-radius: 100%;
+    width: 100% !important;
+  }
+
+  .profile-content {
+    margin-top: 1rem;
+    @include global-font-props( 18px, 400, normal, normal, -1px, none );
+    color: #333333;
+    a {
+      @include global-font-props( 16px, 700, normal, normal, 0px, none );
+    }
+    .btn-resume-modal {
+      padding: 6px 15px;
+      background: $primary-color;
+      color: #ffffff;
+      border-radius: 6px;
+    }
+  }
+}
+
+.resume-container {
+  margin-top: 2rem;
+  .resume-sidebar {
+    .resume-ava {
+      text-align: center;
+      img {
+        width: 80%;
+      }
+    }
+    .resume-profile {
+      text-align: center;
+      margin-top: 2rem;
+      .profile-name {
+        @include global-font-props( 28px, 700, normal, normal, -1px, none );
+        color: $primary-color;
+      }
+      .profile-profession {
+        @include global-font-props( 24px, 400, normal, normal, -1px, none );
+        color: $primary-color;
+        margin-top: -5px;
+      }
+    }
+    .resume-contact {
+      margin-top: 2rem;
+
+      ul {
+        li {
+          a {
+            @include transition(all, 0.20s, ease);
+            @include global-font-props( 18px, 700, normal, normal, -1px, none );
+            color: $primary-color;
+            border-bottom: 1px solid #e9e9e9;
+            padding: .6rem .6rem .6rem .6rem;
+          }
+          &:last-child {
+            a {
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .resume-profile-summary {
+    .content {
+      .heading {
+        @include global-font-props( 48px, 700, normal, normal, -1px, none );
+        color: $primary-color;
+      }
+
+      .box {
+        .title {
+          @include global-font-props( 36px, 400, normal, normal, -1px, none );
+          color: #333333;
+        }
+        .detail {
+          .detail-footer {
+            @include global-font-props( 18px, 400, normal, normal, -1px, none );
+            color: #666666;
+          }
+        }
+      }
+    }
   }
 }
