@@ -62,19 +62,19 @@
 														<div class="title">{{ exp.position }}</div>
 														<div class="detail">
 															<div class="uk-grid-small" uk-grid>
-																<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
+																<div class="uk-width-1-3@m">
 																	<div class="detail-footer">
 																		<span uk-icon="icon: world; ratio: .8"></span>
 																		{{ exp.company }}
 																	</div>
 																</div>
-																<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
+																<div class="uk-width-1-3@m">
 																	<div class="detail-footer">
 																		<span uk-icon="icon: location; ratio: .8"></span>
 																		{{ exp.location }}
 																	</div>
 																</div>
-																<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
+																<div class="uk-width-1-3@m">
 																	<div class="detail-footer">
 																		<span uk-icon="icon: calendar; ratio: .8"></span>
 																		{{ exp.from + ' - ' + exp.to }}
@@ -89,11 +89,47 @@
 										<div>
 											<div class="content">
 												<div class="heading">Education</div>
+												<div v-for="(ed, index) in education" :key="`education-${index}`" class="uk-margin-small box">
+													<div class="uk-clearfix">
+														<div class="title">{{ ed.name }}</div>
+														<div class="detail">
+															<div class="uk-grid-small" uk-grid>
+																<div class="uk-width-1-2@s">
+																	<div class="detail-footer">
+																		<span uk-icon="icon: location; ratio: .8"></span>
+																		{{ ed.jurusan }}
+																	</div>
+																</div>
+																<div class="uk-width-1-2@s">
+																	<div class="detail-footer">
+																		<span uk-icon="icon: calendar; ratio: .8"></span>
+																		{{ ed.since }}
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 										<div>
 											<div class="content">
 												<div class="heading">Skills</div>
+												<div v-for="(sk, index) in skills" :key="`skills-${index}`" class="uk-margin-small box">
+													<div class="uk-clearfix">
+														<!-- <div class="title">{{ sk.name }}</div> -->
+														<div class="detail">
+															<div class="uk-grid-small" uk-grid>
+																<div class="uk-width-1-1@s">
+																	<div class="detail-footer">
+																		<span uk-icon="icon: hashtag; ratio: .8"></span>
+																		{{ sk }}
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -156,7 +192,7 @@
 				fullname: 'Sony Darmawan',
 				profession: 'Web Developer',
 				contact: {
-					email: 'me@sonypiay.com',
+					email: 'j2megates@gmail.com',
 					address: 'Jakarta, Indonesia',
 					twitter: {
 						link: 'https://twitter.com/sonypiay',
@@ -174,19 +210,42 @@
 				workexperience: [
 					{
 						position: 'ProjectWifi Engineer',
-						company: 'Biznet Networks',
+						company: 'PT. Supra Primatama Nusantara',
 						location: 'Jakarta, Indonesia',
 						from: 'Desember 2014',
 						to: 'June 2019'
 					},
 					{
-						position: 'Jr. Web Developer',
-						company: 'Eannovate Creative Technology',
+						position: 'Web Developer',
+						company: 'PT. Eannovate Creative Technology',
 						location: 'Jakarta, Indonesia',
-						from: 'Maret 2019',
-						to: 'Present'
+						from: 'Maret 2020',
+						to: 'Now'
 					}
 				],
+				education: [
+					{
+						name: 'SMK Negeri 1 Jakarta',
+						since: 'Jun 2010 - Mei 2014',
+						jurusan: 'Computer and Network Engineering'
+					},
+					{
+						name: 'Mercu Buana University',
+						since: 'Sep 2015 - Jan 2020',
+						jurusan: 'Information System'
+					},
+				],
+				skills: [
+					"PHP, Laravel",
+					"HTML &amp; CSS",
+					"Javascript",
+					"MySQL, SQL Server",
+					"Sass",
+					"Vue JS",
+					"Linux (CentOS, Debian, Ubuntu)",
+					"Mikrotik Router",
+					"Git",
+				]
 			}
 		}
 	}
