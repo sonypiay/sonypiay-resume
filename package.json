@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "sass": "node-sass -w src/assets/css/main.scss -o public/css --recursive"
+    "sass-dev": "sass src/assets/css/main.scss:public/css/main.css",
+    "sass-watch": "sass src/assets/css/main.scss:public/css/main.css --watch",
+    "sass-prod": "sass src/assets/css/main.scss:public/css/main.css --style=compressed"
   },
   "dependencies": {
     "core-js": "^3.12.0",
