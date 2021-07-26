@@ -123,24 +123,43 @@
 										<div>
 											<div class="content">
 												<div class="heading">Skills</div>
-												<div v-for="(sk, index) in skills" :key="`skills-${index}`" class="uk-margin-small box">
-													<div class="uk-clearfix">
-														<!-- <div class="title">{{ sk.name }}</div> -->
-														<div class="detail">
-															<div class="uk-grid-small" uk-grid>
-																<div class="uk-width-1-1@s">
-																	<div class="detail-footer">
-																		<span uk-icon="icon: hashtag; ratio: .8"></span>
-																		{{ sk }}
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
+                        <div class="uk-margin-small box">
+                          <div class="uk-grid-small" uk-grid>
+                            <div v-for="(sk, index) in skills" :key="`skills-${index}`" class="uk-width-1-3@s">
+                              <div class="detail">
+                                <div class="detail-footer">
+                                  <span uk-icon="icon: hashtag; ratio: .8"></span>
+                                  <span v-html="sk"></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 											</div>
 										</div>
 										<!-- skills -->
+
+                    <!-- portfolio -->
+                    <div>
+                      <div class="content">
+                        <div class="heading">My Works</div>
+                        <div v-for="(item, index) in myworks" :key="`myworks-${index}`" class="uk-margin-small box">
+                          <div class="title">{{ item.project_name }}</div>
+                          <div class="detail">
+                            <div v-show="item.description" class="detail-footer">
+                              Description: <div v-html="item.description"></div>
+                            </div>
+
+                            <!-- <div class="uk-grid-small" v-if="item.images.length > 0" uk-grid>
+                              <div class="uk-width-1-3@s" v-for="(img, index_img) in item.images" :key="`img-portfolio-${item.project_name}-${index_img}`">
+                                <img :src="img" alt="portfolio" class="uk-width-1-1" />
+                              </div>
+                            </div> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- portfolio -->
 
 									</div>
 								</div>
@@ -201,7 +220,62 @@ export default {
         "Linux (CentOS, Debian, Ubuntu)",
         "Mikrotik Router",
         "Git",
-      ]
+        "Restful API"
+      ],
+      myworks: [
+        {
+          project_name: 'ProjectWifi Management Tools',
+          description: 'Sistem informasi divisi ProjectWifi untuk request kebutuhan access point dan approval. Selain itu inventori data untuk pendataan model access point, ip, coordinate dan lokasi yang terpasang.',
+          images: [
+            '../assets/images/portfolio/pmtools.jfif'
+          ]
+        },
+        {
+          project_name: 'APEL Subdit Harda Polda Metro Jaya',
+          description: 'Aplikasi penyelidikan terintegrasi elektronik Polda Metro Jaya (APEL)',
+          images: [
+            '../assets/images/portfolio/biznetwifi-landing-page.png'
+          ]
+        },
+        {
+          project_name: 'BiznetWifi Landing Page',
+          description: 'Portal Biznetwifi dengan design baru.',
+          images: [
+            '../assets/images/portfolio/pmtools/portfolio1.jpg'
+          ]
+        },
+        {
+          project_name: 'Online Digital Wedding',
+          description: 'Undangan pernikahan berbasis digital (website).',
+          images: [
+            '../assets/images/portfolio/online_wedding.PNG',
+            '../assets/images/portfolio/online_wedding.PNG',
+            '../assets/images/portfolio/online_wedding.PNG',
+            '../assets/images/portfolio/online_wedding.PNG'
+          ]
+        },
+        {
+          project_name: 'Solusi Pajakku',
+          description: 'Platform penjadwalan untuk konsultasi pajak.',
+          images: [
+            '../assets/images/portfolio/pmtools.jfif'
+          ]
+        },
+        {
+          project_name: 'Labmode Indonesia',
+          description: 'Platform Riset, Direktori, Jobs dan Berita Seputar Industri Fashion.',
+          images: [
+            '../assets/images/portfolio/pmtools.jfif'
+          ]
+        },
+        {
+          project_name: 'Garden Buana',
+          description: 'Platform penyedia jasa yang mempertemukan tukang kebun dengan pelanggan.',
+          images: [
+            '../assets/images/portfolio/pmtools.jfif'
+          ]
+        },
+      ],
     }
   },
 }

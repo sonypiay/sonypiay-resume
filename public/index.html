@@ -1,23 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="preload" href="<%= BASE_URL %>plugins/uikit/css/app.min.css?v=3.6.0" as="style" />
-    <link rel="preload" href="<%= BASE_URL %>css/main.css" as="style" />
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <link rel="stylesheet" href="<%= BASE_URL %>plugins/uikit/css/app.min.css?v=3.6.0" media="screen" />
-    <link rel="stylesheet" href="<%= BASE_URL %>css/main.css" media="screen" />
-    <script async defer src="<%= BASE_URL %>plugins/uikit/js/app.min.js?v=3.6.0"></script>
-    <script async defer src="<%= BASE_URL %>plugins/uikit/js/icons.min.js?v=3.6.0"></script>
-    <title>sonypiay</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <!-- metadata -->
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="keywords" content="sony darmawan, sonypiay, sony piay, web developer, web developer in jakarta">
+  <meta name="description" content="Sony Darmawan - Web Developer. I really passionate with web programming, linux, network, learn everything autodidact on the Internet.">
+  <meta name="author" content="Sony Darmawan">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, follow">
+    <!-- metadata -->
+
+  <!-- twitter:card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sony Darmawan" />
+  <meta name="twitter:url" content="https://www.sonypiay.xyz" />
+  <meta name="twitter:description" content="Sony Darmawan - Web Developer. I really passionate with web programming, linux, network, learn everything autodidact on the Internet." />
+  <meta name="twitter:domain" content="https://www.sonypiay.xyz" />
+  <meta name="twitter:author" content="@sonypiay">
+
+  <!-- fb:card -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sony Darmawan" />
+  <meta property="og:description" content="Sony Darmawan - Web Developer. I really passionate with web programming, linux, network, learn everything autodidact on the Internet." />
+
+  <!-- assets -->
+  <link rel="dns-prefetch" href="<%= BASE_URL %>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="<%= BASE_URL %>plugins/uikit/css/app.min.css?v=3.6.0" as="style" />
+  <link rel="preload" href="<%= BASE_URL %>css/main.css" as="style" />
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <link rel="stylesheet" href="<%= BASE_URL %>plugins/uikit/css/app.min.css?v=3.6.0" media="screen" />
+  <link rel="stylesheet" href="<%= BASE_URL %>css/main.css" media="screen" />
+  <script defer src="<%= BASE_URL %>plugins/uikit/js/app.min.js?v=3.6.0"></script>
+  <script defer src="<%= BASE_URL %>plugins/uikit/js/icons.min.js?v=3.6.0"></script>
+  <!-- assets -->
+
+  <title>sonypiay</title>
+</head>
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
 </html>
