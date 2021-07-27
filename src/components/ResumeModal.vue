@@ -9,7 +9,7 @@
 							<div class="uk-width-1-4@xl uk-width-1-4@l uk-width-1-3@m uk-width-1-1@s">
 								<div class="resume-sidebar">
 									<div class="resume-ava">
-										<img class="uk-border-circle" src="../assets/images/me.jpg" />
+										<img class="uk-border-circle" src="/img/me.webp" />
 									</div>
 									<div class="resume-profile">
 										<div class="profile-name">{{ fullname }}</div>

@@ -10,7 +10,7 @@
 				<div class="content-profile">
 					<div class="uk-grid-large" uk-grid>
 						<div class="uk-width-1-4@xl uk-width-1-4@l uk-width-1-4@m uk-width-1-3@s uk-visible@s">
-							<img class="ava" src="../assets/images/me.jpg" />
+							<img class="ava" src="/img/me.webp" />
 						</div>
 						<div class="uk-width-expand">
 							<div class="profile-name">{{ fullname }}</div>
