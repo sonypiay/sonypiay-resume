@@ -232,7 +232,8 @@ export default {
         "Linux (CentOS, Debian, Ubuntu)",
         "Mikrotik Router",
         "Git",
-        "Restful API"
+        "Restful API",
+        "Docker"
       ],
       myworks: [
         {
